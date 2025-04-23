@@ -36,3 +36,5 @@ build/
 *.trace.db
 *.mv.db
 
+## data ##
+/data/
