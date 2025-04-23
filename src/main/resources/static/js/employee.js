@@ -16,7 +16,7 @@ function renderTable(employees) {
     employees.forEach(emp => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${emp.name} ${emp.lastName}</td>
+            <td>${emp.firstName} ${emp.lastName}</td>
             <td>${emp.email}</td>
             <td>${emp.role}</td>
             <td>${emp.phoneNumber}</td>
@@ -40,7 +40,7 @@ form.addEventListener('submit', async (e) => {
     console.log(tempPhone);
 
     const employee = {
-        name: document.getElementById('name').value,
+        firstName: document.getElementById('firstName').value,
         lastName: document.getElementById('lastName').value,
         email: document.getElementById('email').value,
         role: document.getElementById('role').value,
@@ -79,7 +79,7 @@ async function editEmployee(id) {
     const emp = await response.json();
 
     employeeIdField.value = emp.id;
-    document.getElementById('name').value = emp.name;
+    document.getElementById('firstName').value = emp.firstName;
     document.getElementById('lastName').value = emp.lastName;
     document.getElementById('email').value = emp.email;
     document.getElementById('role').value = emp.role;

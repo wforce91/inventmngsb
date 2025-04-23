@@ -16,7 +16,7 @@ public class Employee {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String firstName;
 
     @Column(nullable = false)
     private String lastName;
@@ -40,8 +40,8 @@ public class Employee {
     // Constructors
     public Employee() {}
 
-    public Employee(String name, String lastName, String email, String address, String phoneNumber, String ssn, Role role) {
-        this.name = name;
+    public Employee(String firstName, String lastName, String email, String address, String phoneNumber, String ssn, Role role) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.address = address;
@@ -60,12 +60,12 @@ public class Employee {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {

@@ -22,7 +22,6 @@ INSERT INTO products (name, quantity) VALUES
 -- Create 'employees' table
 CREATE TABLE employees (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     address VARCHAR(255) NOT NULL,
@@ -33,6 +32,6 @@ CREATE TABLE employees (
 );
 
 -- Sample employee data
-INSERT INTO employees (name, first_name, last_name, address, phone_number, ssn, email, role) VALUES
-('Alice Manager', 'Alice', 'Manager', '123 Main St', '555-1234', '123-45-6789', 'alice@example.com', 'MANAGER'),
-('Bob Staff', 'Bob', 'Staff', '456 Elm St', '555-5678', '987-65-4321', 'bob@example.com', 'STAFF');
+INSERT INTO employees (first_name, last_name, address, phone_number, ssn, email, role) VALUES
+('Alice', 'Manager', '123 Main St', '555-1234', '123-45-6789', 'alice@example.com', 'MANAGER'),
+('Bob', 'Staff', '456 Elm St', '555-5678', '987-65-4321', 'bob@example.com', 'STAFF');
